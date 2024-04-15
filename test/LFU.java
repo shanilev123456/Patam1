@@ -17,7 +17,7 @@ public class LFU implements CacheReplacementPolicy {
     }
 
     @Override
-    public void add(String item) {
+    public void add(String item) { 
         if (item == null) {
             throw new IllegalArgumentException("Cannot add null to LFU");
         }

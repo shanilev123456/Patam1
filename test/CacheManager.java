@@ -18,7 +18,7 @@ public class CacheManager {
         this.maxSize = maxSize;
         this.crp = crp;
         this.cache = new HashSet<>();
-    }
+    } 
 
     public boolean query(String item) {
         return cache.contains(item);

@@ -26,7 +26,7 @@ public class BloomFilter {
             int index= Math.abs(new BigInteger(hash).intValue())%size;
             bitArray.set(index,true);
         }
-    }
+    } 
     public boolean contains(String str){
         for(MessageDigest md: hashFunc){
             byte[] hash=md.digest(str.getBytes());

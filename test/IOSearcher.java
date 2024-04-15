@@ -12,7 +12,7 @@ public class IOSearcher {
         for (String fileName : fileNames) {
             if (loadWordsFromFile(fileName).contains(word)) {
                 return true;
-            }
+            } 
         }
         return false;
     }

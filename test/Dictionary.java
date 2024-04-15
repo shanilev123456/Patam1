@@ -45,7 +45,7 @@ public class Dictionary {
             }
             boolean isInBloomFilter = bloomFilter.contains(word);
             if (isInBloomFilter) {
-                existingWordsCache.add(word);
+                existingWordsCache.add(word); 
             } else {
                 nonExistingWordsCache.add(word);
             }  
