@@ -12,11 +12,11 @@ public class Dictionary {
     private final BloomFilter bloomFilter;
     private final String[] textfile;
 
-    public Dictionary(String fileName1, String fileName2) {
+    public Dictionary(String... fileNames) {
         existingWordsCache = new CacheManager(400, new LRU());
         nonExistingWordsCache = new CacheManager(100, new LFU());
         bloomFilter = new BloomFilter(256, "MD5", "SHA1");
-        textfile = new String[]{fileName1, fileName2};
+        this.textfile = fileNames;
         for (String fileName : textfile) {
             try {
                 FileReader fr = new FileReader(fileName);
@@ -66,7 +66,9 @@ public class Dictionary {
             }
             return result;
         }
-    }
+        
+        
+}
     
     
     
